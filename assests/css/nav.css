@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.heading {
+  color: #e74c3c;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}

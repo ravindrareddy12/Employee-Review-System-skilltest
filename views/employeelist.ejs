@@ -1,0 +1,55 @@
+<!-- employees.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee List</title>
+</head>
+<body>
+  <h1 class="title">Employee List</h1>
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Performance</th>
+        <th>Reviews</th>
+        <th>Roles</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% employees.forEach(function(employee) { %>
+        <tr>
+          <td><%= employee.name %></td>
+          <td><%= employee.email %></td>
+          <td><%= employee.performance %></td>
+          <td><%= employee.reviews %></td>
+          <td><%= employee.roles %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <% employees.forEach(function(employee) { %>
+    <h1 class="edit-form-title">Edit Employee <%= employee.name %></h1>
+    <form class="edit-form" action="/admin/editEmployee/<%= employee._id %>" method="POST">
+      <label class="form-label" for="name">Name:</label>
+      <input class="form-input" type="text" name="name" value="<%= employee.name %>" required disabled>
+
+      <label class="form-label" for="email">Email:</label>
+      <input class="form-input" type="email" name="email" value="<%= employee.email %>" required disabled>
+
+      <label class="form-label" for="performance">Performance:</label>
+      <input class="form-input" type="text" name="performance" value="<%= employee.performance %>" required >
+
+      <label class="form-label" for="reviews">Reviews:</label>
+      <input class="form-input" type="text" name="reviews" value="<%= employee.reviews %>" >
+
+      <label class="form-label" for="roles">Roles:</label>
+      <input class="form-input" type="text" name="roles" value="<%= employee.roles %>" required disabled>
+
+      <button class="form-submit" type="submit">Save</button>
+    </form>
+  <% }); %>
+
+</body>
+</html>
