@@ -44,28 +44,31 @@ This code follows MVC pattern and hence everything is differentiated and well ma
     Employee-Review-System
         |-----assets
         |       |--- css
-        |       |     |-- habit.css
-        |       |     |-- home.css
-        |       |     └-- layout.css
+        |       |     |-- admin.css
+        |       |     |-- employeelist.css
+        |       |     |-- nav.css
+        |             |--home.css
         |       |--- js
-        |       |     |-- habit.js
-        |       |     └-- moment.js
-        |       |--- sass
-        |             |-- habit.scss
-        |             |-- home.scss
-        |             └-- layout.scss
+        |       |     |-- admin.js
+        |       |     
+        
         |------ config
         |         └--- mongoose.js
         |------ controllers
-        |         └--- habit_controllers.js
+        |         └---admincontrollers.js
+                  └---Employeecontrollers.js
         |------ models
-        |         └--- habit.js
+        |         └--- adminSchema.js
+                   └---EmployeeSchema.js
         |------ routers
         |         └--- index.js
+                  └---admin.js
+                  └---employee.js
         |------ views
-        |         |--- habit..ejs
         |         |--- home.ejs
-        |         └--- layout.ejs
+        |         |--- adminLogin.ejs
+        |         └--- employee.ejs
+                  └---employeelist.ejs
         |------ .gitignore
         |------ app.js
         |------ package.json
